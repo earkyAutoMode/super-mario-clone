@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>超级玛丽克隆版</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #5c94fc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+        #game-container {
+            position: relative;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        canvas {
+            background-color: #5c94fc;
+            display: block;
+        }
+        #ui {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+            text-shadow: 2px 2px black;
+            font-size: 20px;
+            pointer-events: none;
+        }
+        #message {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 48px;
+            font-weight: bold;
+            text-align: center;
+        }
+        #controls {
+            position: absolute;
+            bottom: -30px;
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+        <div id="ui">
+            <div id="score">分数: 0</div>
+        </div>
+        <div id="message"></div>
+        <div id="controls">
+            方向键移动，上键/空格跳跃 | 重新开始请刷新页面
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
